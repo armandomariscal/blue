@@ -3,7 +3,7 @@ from main.models import Movie
 
 
 def home(request):
-    movies = Movie.objects.filter(id=2)
+    movies = Movie.objects.all()
     context = {
         'movies': movies
     }
