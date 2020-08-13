@@ -12,7 +12,7 @@ class CommonModel(models.Model):
 
 class Movie(CommonModel):
     name = models.CharField(max_length=255)
-    file = models.FileField('movies/')
+    file = models.FileField(upload_to="static/movies/")
 
     def __str__(self):
         return "{}".format(self.name)

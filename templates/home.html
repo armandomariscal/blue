@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    {% for movie in movies %}
+        <li>{{ movie.file.path }}</li>
+        <li>http://localhost:8000{{ movie.file.url }}</li>
+    {% endfor %}
+    </ul>
+
+    {% for movie in movies %}
+    <video width="320" height="240" controls>
+        <source src="http://localhost:8000{{ movie.file.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% endfor %}
+
+    {% for movie in movies %}
+    <video width="320" height="240" controls>
+        <source src="http://localhost:8000{{ movie.file.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% endfor %}
+
+    {% for movie in movies %}
+    <video width="320" height="240" controls>
+        <source src="http://localhost:8000{{ movie.file.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% endfor %}
+
+</body>
+</html>
